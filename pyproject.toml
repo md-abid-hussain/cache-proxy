@@ -1,0 +1,29 @@
+[project]
+name = "cache-proxy"
+version = "0.1.0"
+description = "Cache Proxy CLI tool"
+readme = "README.md"
+authors = [
+    { name = "Md Abid Hussain", email = "abid0hussain1733@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "cachetools>=5.5.2",
+    "fastapi>=0.115.12",
+    "httpx>=0.28.1",
+    "typer>=0.15.3",
+    "uvicorn>=0.34.2",
+]
+
+[project.scripts]
+cache-proxy = "cache_proxy:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "isort>=6.0.1",
+]
